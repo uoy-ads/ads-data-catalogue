@@ -36,14 +36,6 @@ const router = createRouter({
     // },
     {
       path: '/',
-      component: FrontPage,
-      meta: {
-        title: 'Welcome',
-        description: 'ARIADNE brings together and integrates existing archaeological research data infrastructures so that researchers can use the various distributed datasets and new and powerful technologies as an integral component of the archaeological research methodology.',
-      }
-    },
-    {
-      path: '/search',
       component: Result
     },
     {
