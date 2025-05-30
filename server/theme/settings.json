@@ -1,5 +1,6 @@
 {
     "terms": {
+        "country.name.raw": ["England", "Wales", "Scotland", "Northern Ireland", "Isle of Man", "United Kingdom"],
         "publisher.name.raw": "Archaeology Data Service"
     }
 }

@@ -60,7 +60,6 @@ class Query {
     $query['from'] = $this->getFrom();
     $query['sort'] = $this->getSort();
 
-    $operator = !empty($_GET['operator']) && $_GET['operator'] === 'or' ? 'or' : 'and';
     $filters = [];
     $innerQuery = [];
 
@@ -88,34 +87,29 @@ class Query {
     $filters = QuerySettings::getFilters($_GET);
 
     $portalFilter = [
-           'bool' => [
-               'should' => [
-                   ['terms' => ['country.name.raw' => ['England', 'Wales', 'Scotland', 'Northern Ireland', 'Isle of Man', 'United Kingdom']]],
-                   ['term' => ['publisher.name.raw' => 'Archaeology Data Service']]
-               ]
-           ]
-       ];
-
-    if ($portalFilter) {
-        array_unshift($filters, $portalFilter);
-    }
+      'bool' => [
+        'should' => []
+      ]
+    ];
 
     // get terms from settings
     if(isset($this->settings->terms)) {
       foreach ($this->settings->terms as $key => $value) {
-        $filters[] = [
-          'term' => [$key => $value]
-        ];
+        if(is_array($value)) {
+          $portalFilter['bool']['should'][] = ['terms' => [$key => $value]];
+        } else {
+          $portalFilter['bool']['should'][] = ['term' => [$key => $value]];
+        }
       }
+    }
+
+    if(!empty($portalFilter['bool']['should'])) {
+        array_unshift($filters, $portalFilter);
     }
 
     // Push filters to main query
     foreach ($filters as $filter) {
-      if ($operator === 'or') {
-        $query['query']['bool']['filter']['bool']['should'][] = $filter;
-      } else {
-        $query['query']['bool']['filter'][] = $filter;
-      }
+      $query['query']['bool']['filter'][] = $filter;
     }
 
     return $query;
