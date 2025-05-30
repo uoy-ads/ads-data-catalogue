@@ -21,7 +21,7 @@ export const frontPageLinks = [
  */
 export const mainNavigation = [
   {
-    path: '/search',
+    path: '/',
     name: 'Catalogue',
     icon: 'search',
     color: 'yellow',
