@@ -1,3 +1,3 @@
 export const themeAggregationTypesToSkip : string[] = [
-    'publisher'
+    //'publisher'
 ];

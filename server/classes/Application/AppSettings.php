@@ -11,7 +11,7 @@ class AppSettings {
   public static function getSettings () {
     if (!self::$settings) {
       self::$settings = json_decode(file_get_contents('../../classes/settings.json'));
-      self::applyThemeSettings();
+      //self::applyThemeSettings();
     }
     return self::$settings;
   }

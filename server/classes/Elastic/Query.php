@@ -87,6 +87,19 @@ class Query {
     // Push filters
     $filters = QuerySettings::getFilters($_GET);
 
+    $portalFilter = [
+           'bool' => [
+               'should' => [
+                   ['terms' => ['country.name.raw' => ['England', 'Wales', 'Scotland', 'Northern Ireland', 'Isle of Man', 'United Kingdom']]],
+                   ['term' => ['publisher.name.raw' => 'Archaeology Data Service']]
+               ]
+           ]
+       ];
+
+    if ($portalFilter) {
+        array_unshift($filters, $portalFilter);
+    }
+
     // get terms from settings
     if(isset($this->settings->terms)) {
       foreach ($this->settings->terms as $key => $value) {
