@@ -36,6 +36,7 @@ const router = createRouter({
     // },
     {
       path: '/',
+      alias: '/search',
       component: Result
     },
     {
