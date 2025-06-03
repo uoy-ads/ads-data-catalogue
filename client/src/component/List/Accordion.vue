@@ -10,7 +10,7 @@
         :enabled="!!description"
         top="-3.1rem"
         left="-0.85rem"
-        messageClasses="bg-yellow text-white"
+        messageClasses="bg-primary text-white"
       >
         <div>
           <i

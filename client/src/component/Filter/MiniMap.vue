@@ -13,7 +13,7 @@
           <span class="text-md">{{ title }}</span>
           <div class="flex overflow-hidden">
             <button v-if="canSearch"
-              class="bg-blue-50 px-md py-sm text-center text-sm text-white hover:bg-blue transition-all duration-300 mr-md"
+              class="bg-primary-50 px-md py-sm text-center text-sm text-white hover:bg-primary transition-all duration-300 mr-md"
               :class="showAreaSearch ? 'cursor-pointer opacity-100' : 'cursor-default opacity-0'"
               @click.prevent="searchCurrentArea()"
             >
@@ -21,7 +21,7 @@
               Search area
             </button>
             <button
-              class="bg-yellow px-md py-sm text-center text-sm text-white cursor-pointer hover:bg-green transition-color duration-300"
+              class="bg-primary px-md py-sm text-center text-sm text-white cursor-pointer"
               @click.prevent="showResultInMapView()"
             >
               <i class="fas fa-search mr-xs" />

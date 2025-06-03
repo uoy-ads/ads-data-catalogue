@@ -50,7 +50,7 @@ onMounted(() => {
   const link = document.getElementById(linkId);
 
   if (link && (props.useDefaultStyle || !link.className)) {
-    cssClasses = 'text-blue transition-colors duration-300 hover:text-darkGray hover:underline' + (props.breakWords ? ' break-word' : '');
+    cssClasses = 'text-primary transition-colors duration-300 hover:text-darkGray hover:underline' + (props.breakWords ? ' break-word' : '');
   }
 });
 </script>

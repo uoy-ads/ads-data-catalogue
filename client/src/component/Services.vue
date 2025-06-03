@@ -5,7 +5,7 @@
 
     <form @submit.prevent="utils.blurMobile()">
       <input type="text" placeholder="Search among ARIADNE services.."
-        class="border-base border-gray w-full max-w-3xl p-sm focus:border-yellow outline-none"
+        class="border-base border-gray w-full max-w-3xl p-sm focus:border-primary outline-none"
         ref="serviceInput"
         v-model="filter">
     </form>
@@ -42,7 +42,7 @@
 
                 <!-- link -->
                 <p v-if="utils.validUrl(item.url)" class="mt-sm">
-                  <b-link :href="item.url" target="_blank" class="break-word text-blue hover:underline">
+                  <b-link :href="item.url" target="_blank" class="break-word text-primary hover:underline">
                     <i class="fas fa-external-link-alt mr-sm"></i>
                     <span>{{ item.url }}</span>
                   </b-link>

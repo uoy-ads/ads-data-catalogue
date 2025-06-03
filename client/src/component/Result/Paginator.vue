@@ -33,7 +33,7 @@ const active: boolean = $computed(() => {
 });
 
 const pageClasses = (page: any): string => {
-  let classes = page.active ? 'bg-blue border-blue text-white' : 'border-gray text-blue';
+  let classes = page.active ? 'bg-primary border-primary text-white' : 'border-gray text-primary';
   return classes + (page.hover ? ' hover:bg-gray-30 cursor-pointer' : '')
 };
 

@@ -7,7 +7,7 @@
         icon="fa fa-calendar-alt"
       >
         <p
-          class="bg-red text-white text-md ease-in-out duration-200 overflow-hidden"
+          class="bg-danger text-white text-md ease-in-out duration-200 overflow-hidden"
           :class="{
             'h-none': !activePeriodFiltersWarning,
             'p-sm mb-md': activePeriodFiltersWarning,
@@ -24,7 +24,7 @@
         icon="fa fa-history"
       >
         <p
-          class="bg-red text-white text-md ease-in-out duration-200 overflow-hidden"
+          class="bg-danger text-white text-md ease-in-out duration-200 overflow-hidden"
           :class="{
             'h-none': !activeYearsFilterWarning,
             'p-sm mb-md': activeYearsFilterWarning,

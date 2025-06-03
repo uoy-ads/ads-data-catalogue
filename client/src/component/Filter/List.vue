@@ -6,9 +6,9 @@
 
     <filter-search
       v-if="getShow('search')"
-      color="blue"
-      hoverStyle="hover:bg-blue-80"
-      focusStyle="focus:border-blue"
+      color="primary"
+      hoverStyle="hover:bg-primary-80"
+      focusStyle="focus:border-primary"
       class="mb-lg"
       :breakHg="true"
       :big="true"
@@ -56,7 +56,7 @@
     </template>
 
     <div style="display:none;">
-      <b-link class="text-mmd hover:text-blue transition-color duration-200" :clickFn="() => advanced = !advanced">
+      <b-link class="text-mmd hover:text-primary transition-color duration-200" :clickFn="() => advanced = !advanced">
         <div class="pt-xs pb-md">
           <i class="fas fa-chevron-right cursor-pointer mr-xs duration-200" :class="{ 'transform rotate-90': advanced }"></i>
           Advanced filters
@@ -72,7 +72,7 @@
               :value="operator"
               :options="operatorOptions"
               :maxWidth="50"
-              color="blue"
+              color="primary"
               @input="setOperator"
             />
           </div>

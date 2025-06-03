@@ -25,7 +25,7 @@
         <i v-if="icon" :class="icon"></i>
 
         <b-link v-if="query === 'publisher' && findPublisher(item.name)"
-          class="text-blue hover:underline hover:text-darkGray transition-color duration-300"
+          class="text-primary hover:underline hover:text-darkGray transition-color duration-300"
           :to="utils.paramsToString('/publisher/', { publisher: item.name })">
           <i class="fas fa-info-circle"></i>&nbsp;
         </b-link>
@@ -57,7 +57,7 @@
           v-if="getHomepage(item)"
           :href="getHomepage(item)"
           target="_blank"
-          class="block mt-sm md:mt-none md:ml-md md:inline text-blue hover:underline hover:text-darkGray transition-color duration-300"
+          class="block mt-sm md:mt-none md:ml-md md:inline text-primary hover:underline hover:text-darkGray transition-color duration-300"
         >
           <i class="fa fa-home mr-xs"></i>
           {{ item.institution ? item.institution : getHomepage(item) }}
@@ -67,7 +67,7 @@
           v-if="getEmail(item)"
           class="hover:text-black group block mt-sm md:mt-none md:ml-md md:inline"
         >
-          <i class="fa fa-envelope mr-sm text-blue group-hover:text-black"></i>
+          <i class="fa fa-envelope mr-sm text-primary group-hover:text-black"></i>
           <span v-html="getEmail(item)"></span>
         </span>
 

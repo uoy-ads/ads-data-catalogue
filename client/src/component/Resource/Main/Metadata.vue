@@ -130,7 +130,7 @@
       </template>
 
       <template v-slot="{ item }">
-        <b-link class="text-blue hover:underline hover:text-darkGray transition-color duration-300"
+        <b-link class="text-primary hover:underline hover:text-darkGray transition-color duration-300"
           :to="utils.paramsToString('/subject/' + utils.last(item.id.split('/')), { derivedSubject: item.prefLabel })">
           <i class="fas fa-info-circle mr-xs"></i>
         </b-link>
@@ -156,9 +156,9 @@
       <template v-slot="{ item }">
         <span v-if="getPeriodo(item)">
           <span class="mr-xs" @mouseenter="toggleTooltip($event, true)" @mouseleave="toggleTooltip($event, false)">
-            <i class="fas fa-question-circle text-blue hover:text-darkGray transition-color duration-300 mr-xs"/>
+            <i class="fas fa-question-circle text-primary hover:text-darkGray transition-color duration-300 mr-xs"/>
             <div class="fixed z-20 hidden">
-              <div class="bg-blue text-white p-sm pb-xs relative">
+              <div class="bg-primary text-white p-sm pb-xs relative">
                 <div class="absolute" style="width:20px;height:30px;left:-10px;top:0"></div>
                 <div class="mb-xs">
                   <b>Period:</b>&nbsp;

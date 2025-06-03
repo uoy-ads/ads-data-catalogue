@@ -7,7 +7,7 @@
     <input
       type="text"
       :placeholder="getFilterPlaceholder(title)"
-      class="flex-1 w-full py-xs px-sm text-mmd outline-none border-base xl:border-r-0 border-gray focus:border-blue disabled:bg-white"
+      class="flex-1 w-full py-xs px-sm text-mmd outline-none border-base xl:border-r-0 border-gray focus:border-primary disabled:bg-white"
       v-model="options.search"
       :disabled="isLoading"
       @input="debouncedSearch($event)"
@@ -18,8 +18,8 @@
       <button
         type="button"
         @click="setSort(sortKey || 'key')"
-        class="text-white hover:bg-blue-90 px-sm py-xs text-md group transition-all duration-300 focus:outline-none flex-1 xl:flex-initial"
-        :class="{ 'bg-blue': options.sortBy === (sortKey || 'key'), 'bg-blue-50': options.sortBy !== (sortKey || 'key') }"
+        class="text-white hover:bg-primary-90 px-sm py-xs text-md group transition-all duration-300 focus:outline-none flex-1 xl:flex-initial"
+        :class="{ 'bg-primary': options.sortBy === (sortKey || 'key'), 'bg-primary-50': options.sortBy !== (sortKey || 'key') }"
       >
         <span class="pr-xs">{{ name }}</span>
         <i
@@ -33,8 +33,8 @@
       <button v-if="sortKeyOption"
         type="button"
         @click="setSort(sortKeyOption)"
-        class="text-white hover:bg-blue-90 px-sm py-xs text-md group transition-all duration-300 focus:outline-none flex-1 xl:flex-initial"
-        :class="{ 'bg-blue': options.sortBy === sortKeyOption, 'bg-blue-50': options.sortBy !== sortKeyOption }"
+        class="text-white hover:bg-primary-90 px-sm py-xs text-md group transition-all duration-300 focus:outline-none flex-1 xl:flex-initial"
+        :class="{ 'bg-primary': options.sortBy === sortKeyOption, 'bg-primary-50': options.sortBy !== sortKeyOption }"
       >
         <span class="pr-xs">{{ sortKeyOptionLabel }}</span>
         <i
@@ -48,8 +48,8 @@
       <button
         type="button"
         @click="setSort('doc_count')"
-        class="text-white hover:bg-blue-90 px-sm py-xs text-md group transition-all duration-300 focus:outline-none flex-1 xl:flex-initial"
-        :class="{ 'bg-blue': options.sortBy === 'doc_count', 'bg-blue-50': options.sortBy !== 'doc_count' }"
+        class="text-white hover:bg-primary-90 px-sm py-xs text-md group transition-all duration-300 focus:outline-none flex-1 xl:flex-initial"
+        :class="{ 'bg-primary': options.sortBy === 'doc_count', 'bg-primary-50': options.sortBy !== 'doc_count' }"
       >
         <span class="pr-xs">{{ hits }}</span>
         <i

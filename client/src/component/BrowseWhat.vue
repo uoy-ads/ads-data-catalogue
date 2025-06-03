@@ -15,7 +15,7 @@
       <h2 class="text-2xl">Browse what</h2>
       <p class="mb-lg">Click on a word in the word cloud to make a search in the catalogue.</p>
 
-      <p v-if="(!wordCloud && !isLoading) || errorText" class="text-red">
+      <p v-if="(!wordCloud && !isLoading) || errorText" class="text-danger">
         {{ errorText || 'Internal error. Could not load cloud.' }}
       </p>
       <canvas class="max-w-full mx-auto" id="cloud" :class="{ 'cursor-pointer': hovering }" @mouseleave="leaveCanvas"></canvas>

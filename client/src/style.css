@@ -61,29 +61,29 @@ input::placeholder, textarea::placeholder {
 
 /* small marker */
 .ariadne-map .marker-cluster-small {
-  @apply bg-green-40;
+  @apply bg-success-40;
 }
 
 .ariadne-map .marker-cluster-small div {
-  @apply bg-green-80;
+  @apply bg-success-80;
 }
 
 /* medium marker */
 .ariadne-map .marker-cluster-medium {
-  @apply bg-yellow-40;
+  @apply bg-primary-40;
 }
 
 .ariadne-map .marker-cluster-medium div {
-  @apply bg-yellow-80;
+  @apply bg-primary-80;
 }
 
 /* large marker */
 .ariadne-map .marker-cluster-large {
-  @apply bg-red-40;
+  @apply bg-danger-40;
 }
 
 .ariadne-map .marker-cluster-large div {
-  @apply bg-red-80;
+  @apply bg-danger-80;
 }
 
 .ariadne-map--resource .leaflet-control-container {
@@ -137,7 +137,7 @@ input::placeholder, textarea::placeholder {
 /* dot hover/focus */
 .slick-slider .slick-dots li button:hover::before,
 .slick-slider .slick-dots li button:focus::before {
-  @apply text-blue-40;
+  @apply text-primary-40;
 }
 
 /* arrow hover/focus */
@@ -145,7 +145,7 @@ input::placeholder, textarea::placeholder {
 .slick-slider .slick-prev:focus::before,
 .slick-slider .slick-next:hover::before,
 .slick-slider .slick-next:focus::before {
-  @apply text-blue-70;
+  @apply text-primary-70;
 }
 
 /* active dot & default arrow styles */
@@ -156,12 +156,12 @@ input::placeholder, textarea::placeholder {
   @apply transition-all;
   @apply duration-300;
   @apply opacity-100;
-  @apply text-blue;
+  @apply text-primary;
 }
 
 /* services links inside info */
 .services-a-style a {
-  @apply text-blue;
+  @apply text-primary;
   @apply transition-colors;
   @apply duration-300;
 }

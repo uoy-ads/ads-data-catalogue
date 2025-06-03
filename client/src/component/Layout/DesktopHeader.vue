@@ -22,7 +22,7 @@
           <b-link
             :to="item.path"
             :class="`${ item.groupHover || '' } ${ item.hover } ${ item.border }` + (isActive(item.path) ? ` ${ item.bg } ${ item.border }` : '')"
-            class="block relative transition-all duration-300 text-mmd text-red flex items-center justify-center h-full"
+            class="block relative transition-all duration-300 text-mmd text-danger flex items-center justify-center h-full"
           >
             <span class="leading-1" style="font-weight:900;font-size:21px;">
               {{ item.name }}

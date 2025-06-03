@@ -29,7 +29,7 @@
         <div class="flex w-full justify-end h-full">
           <button
             type="button"
-            class="p-base mt-xs mr-base focus:outline-none transition-all duration-300 hover:outline-none hover:text-yellow"
+            class="p-base mt-xs mr-base focus:outline-none transition-all duration-300 hover:outline-none hover:text-primary"
             @click="toggle"
           >
             <i v-if="show" class="fas fa-times text-xl"></i>

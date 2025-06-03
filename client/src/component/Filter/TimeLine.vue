@@ -22,17 +22,17 @@
             <!--   right="1.75rem" -->
             <!--   :title="`Search range: ${ getSearchRange() }`" -->
             <!-- > -->
-            <!--   <i class="fas fa-search text-blue mr-sm transition-color cursor-pointer duration-300 hover:text-green" -->
+            <!--   <i class="fas fa-search text-primary mr-sm transition-color cursor-pointer duration-300 hover:text-success" -->
             <!--     @click.prevent="navigateToRange('/search')"> -->
             <!--   </i> -->
             <!-- </help-tooltip> -->
 
             <help-tooltip title="Hold shift and drag a selection to search in time range" top="-3rem">
-              <i class="fas fa-info-circle text-yellow text-lg mr-md"></i>
+              <i class="fas fa-info-circle text-primary text-lg mr-md"></i>
             </help-tooltip>
 
             <button
-              class="bg-yellow px-md py-sm text-center text-sm text-white cursor-pointer hover:bg-green transition-color duration-300"
+              class="bg-primary px-md py-sm text-center text-sm text-white cursor-pointer"
               @click="navigateToRange('/browse/when')"
             >
               <i class="fas fa-search mr-xs" />
@@ -48,7 +48,7 @@
             <div class="text-center">
               <div
                 v-if="searchResult.error"
-                class="bg-white p-md text-mmd border-b-base border-red text-red text-mmd"
+                class="bg-white p-md text-mmd border-b-base border-danger text-danger text-mmd"
               >
                 {{ searchResult.error}}
               </div>
@@ -58,7 +58,7 @@
               </div>
 
               <div
-                class="bg-yellow py-md px-base text-mmd text-white cursor-pointer hover:bg-green transition-color duration-300"
+                class="bg-primary py-md px-base text-mmd text-white cursor-pointer"
                 @click="navigateToRange('/search')"
               >
                 <i class="fas fa-search mr-sm"></i>

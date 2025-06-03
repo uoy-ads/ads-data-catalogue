@@ -4,7 +4,7 @@
     class="mb-lg absolute left-0 w-full ariadne-map"
   >
     <div
-      class="absolute w-full text-center text-white bg-red p-md z-10 transition-opacity duration-300"
+      class="absolute w-full text-center text-white bg-danger p-md z-10 transition-opacity duration-300"
       :class="{ 'opacity-0': !getIsAboveMaxNativeZoom }"
     >
       Please switch to another map view for a more optimal viewing experience.

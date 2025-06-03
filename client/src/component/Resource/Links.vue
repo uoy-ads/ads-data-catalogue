@@ -13,7 +13,7 @@
       target="_blank"
       :href="resource.landingPage"
     >
-      <i class="fas fa-external-link-alt mr-sm text-blue group-hover:text-black"></i>View resource at provider
+      <i class="fas fa-external-link-alt mr-sm text-primary group-hover:text-black"></i>View resource at provider
     </b-link>
 
     <div class="md:flex justify-between items-center md:pb-lg mb-md" :class="resource.landingPage ? '' : 'mt-md'">
@@ -24,7 +24,7 @@
             target="_blank"
             class="block pb-md md:pb-none md:pr-md leading-1 hover:text-black group"
           >
-            <i class="fas fa-cloud-download-alt mr-sm text-blue group-hover:text-black"></i>
+            <i class="fas fa-cloud-download-alt mr-sm text-primary group-hover:text-black"></i>
             Json
           </b-link>
         </li>
@@ -35,7 +35,7 @@
             target="_blank"
             class="block py-md md:py-none md:px-md leading-1 hover:text-black group"
           >
-            <i class="fas fa-code mr-sm text-blue group-hover:text-black"></i>
+            <i class="fas fa-code mr-sm text-primary group-hover:text-black"></i>
             Xml
           </b-link>
         </li>
@@ -46,20 +46,20 @@
             target="_blank"
             class="block py-md md:py-none md:px-md leading-1 hover:text-black group"
           >
-            <i class="fas fa-share-alt mr-sm text-blue group-hover:text-black"></i>
+            <i class="fas fa-share-alt mr-sm text-primary group-hover:text-black"></i>
             Rdf
           </b-link>
         </li>
         <template v-if="utils.validUrl(resource.landingPage)">
           <li
             class="relative border-gray border-b-base md:border-b-0 leading-1 last:border-b-0 transition-all duration-300"
-            :class="{ 'text-green': isCiting }"
+            :class="{ 'text-success': isCiting }"
             @click="toggleCiting"
           >
             <span
               class="block py-md md:py-none md:px-md cursor-pointer hover:text-black group"
             >
-              <i class="fas fa-link mr-sm text-blue group-hover:text-black"></i>
+              <i class="fas fa-link mr-sm text-primary group-hover:text-black"></i>
               Cite
             </span>
           </li>
@@ -68,7 +68,7 @@
         <li class="border-gray border-b-base md:border-b-0 last:border-b-0">
           <a class="block py-md md:py-none md:pl-md leading-1 hover:text-black group" href="#"
             v-on:click.prevent="reportIssue">
-            <i class="far fa-envelope mr-sm text-blue group-hover:text-black"></i>
+            <i class="far fa-envelope mr-sm text-primary group-hover:text-black"></i>
             Report an issue
           </a>
         </li>
@@ -81,7 +81,7 @@
         type="text"
         :value="citationLink"
         style="width:100%"
-        class="w-full border-base py-sm px-md block border-yellow outline-none shadow-bottom"
+        class="w-full border-base py-sm px-md block border-primary outline-none shadow-bottom"
       >
     </div>
   </div>

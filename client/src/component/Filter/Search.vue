@@ -16,7 +16,7 @@
         <help-tooltip
           :top="field.val === 'aatSubjects' ? '-4rem' : '-2.5rem'"
           left="0"
-          messageClasses="bg-yellow text-white"
+          messageClasses="bg-primary text-white"
         >
           <b-radio
             class="mr-xl text-white"
@@ -44,7 +44,7 @@
         <help-tooltip
           top="-.25rem"
           left="1rem"
-          messageClasses="bg-blue text-white"
+          messageClasses="bg-primary text-white"
         >
           <i class="fas fa-question-circle" />
 

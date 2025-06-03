@@ -5,7 +5,7 @@
     <div class="relative w-toolbar top-2xl left-0 mb-lg shadow-full z-10">
       <!-- totals -->
       <div class="text-center">
-        <div v-if="result.error" class="bg-white p-md text-mmd border-b-base border-red text-red">
+        <div v-if="result.error" class="bg-white p-md text-mmd border-b-base border-danger text-danger">
           {{ result.error }}
         </div>
         <div class="bg-white p-md text-mmd">
@@ -13,7 +13,7 @@
             <i class="fas fa-circle-notch fa-spin mr-sm backface-hidden"></i>
             Loading..
           </div>
-          <div v-else-if="data && data.error" class="text-red">
+          <div v-else-if="data && data.error" class="text-danger">
             Error: Failed to load map data
           </div>
           <div v-else>
@@ -68,7 +68,7 @@
 
       <!-- display as search results -->
       <div
-        class="bg-yellow p-md text-center text-mmd text-white cursor-pointer hover:bg-green transition-color duration-300"
+        class="bg-primary p-md text-center text-mmd text-white cursor-pointer"
         @click="toSearch"
       >
         <i class="fas fa-search mr-sm"></i>
@@ -81,7 +81,7 @@
       <filter-list :show="['search', 'yearsAndPeriods', 'aggregations']" />
     </filter-toggleable>
 
-    <div class="fixed top-0 left-0 w-screen h-screen z-neg10 bg-blue-40"></div>
+    <div class="fixed top-0 left-0 w-screen h-screen z-neg10 bg-primary-40"></div>
   </div>
 </template>
 

@@ -46,15 +46,15 @@
     </div>
 
     <!-- error & ok text -->
-    <div v-if="error" class="text-red mb-md">{{ error }}</div>
-    <div v-if="ok" class="text-green mb-md">{{ ok }}</div>
+    <div v-if="error" class="text-danger mb-md">{{ error }}</div>
+    <div v-if="ok" class="text-success mb-md">{{ ok }}</div>
 
     <!-- buttons -->
     <div class="flex align-middle justify-between">
       <button type="button" class="py-sm px-2x bg-black text-white border-base border-black cursor-pointer transition-all duration-300 hover:bg-white hover:text-black" v-on:click.prevent="saveItem">
         Save
       </button>
-      <button type="button" class="text-red" v-if="select > -1" v-on:click.prevent="deleteItem">
+      <button type="button" class="text-danger" v-if="select > -1" v-on:click.prevent="deleteItem">
         Delete
       </button>
     </div>

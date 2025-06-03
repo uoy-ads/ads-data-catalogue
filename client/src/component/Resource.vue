@@ -13,7 +13,7 @@
       <div v-if="fromPath">
         <b-link
           :to="utils.paramsToString(fromPath.path, params)"
-          class="p-md bg-black-80 text-white border-b-base border-black hover:bg-blue transition-bg duration-300 w-full block text-center"
+          class="p-md bg-black-80 text-white border-b-base border-black hover:bg-primary transition-bg duration-300 w-full block text-center"
         >
           <i class="fas fa-long-arrow-alt-left mr-sm"></i>
           Back to {{ fromPath.title }}

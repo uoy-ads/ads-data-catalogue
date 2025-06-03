@@ -2,7 +2,7 @@
   <div class="flex">
     <input
       v-model="yearFrom"
-      class="p-sm text-md outline-none focus:border-blue border-base border-gray disabled:bg-white w-1/2"
+      class="p-sm text-md outline-none focus:border-primary border-base border-gray disabled:bg-white w-1/2"
       type="text"
       placeholder="Year (from)"
       :disabled="isLoading"
@@ -11,7 +11,7 @@
 
     <input
       v-model="yearTo"
-      class="p-sm text-md outline-none focus:border-blue border-base border-gray disabled:bg-white w-1/2"
+      class="p-sm text-md outline-none focus:border-primary border-base border-gray disabled:bg-white w-1/2"
       type="text"
       placeholder="Year (to)"
       :disabled="isLoading"
@@ -19,7 +19,7 @@
     />
 
     <button
-      class="bg-blue-50 px-md py-sm text-center text-md text-white cursor-pointer hover:bg-blue transition-color duration-300"
+      class="bg-primary-50 px-md py-sm text-center text-md text-white cursor-pointer hover:bg-primary transition-color duration-300"
       @click.prevent="validateAndSearch">
       Apply
     </button>

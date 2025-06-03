@@ -1,6 +1,6 @@
 <template>
   <div>
-    <p v-if="result.error" class="mt-xl text-red text-mmd">
+    <p v-if="result.error" class="mt-xl text-danger text-mmd">
       {{ result.error }}
     </p>
     <p v-else-if="utils.objectIsEmpty(result) && isLoading" class="mt-xl text-mmd">
@@ -64,7 +64,7 @@
           <div class="ml-4x pl-sm">
             <!-- title -->
             <h3
-              class="text-blue text-mmd font-bold mb-base group-hover:underline"
+              class="text-primary text-mmd font-bold mb-base group-hover:underline"
               v-html="getTitle(res.data) || 'No title'"
             />
 
