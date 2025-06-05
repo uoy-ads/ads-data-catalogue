@@ -4,8 +4,9 @@
 <template>
   <div>
     <div>
-      <layout-mobile-header />
-      <layout-desktop-header />
+      <!--<layout-mobile-header />
+      <layout-desktop-header />-->
+      <layout-ads-header />
 
       <div class="pb-11x" style="padding-top:81px;">
         <router-view />
@@ -23,6 +24,7 @@ import { onMounted } from 'vue';
 import { generalModule } from "@/store/modules";
 import LayoutMobileHeader from './component/Layout/MobileHeader.vue';
 import LayoutDesktopHeader from './component/Layout/DesktopHeader.vue';
+import LayoutAdsHeader from './component/Layout/AdsHeader.vue';
 import LayoutFooter from './component/Layout/Footer.vue';
 import HelpLoader from './component/Help/Loader.vue';
 import '../static/fa/css/all.min.css';

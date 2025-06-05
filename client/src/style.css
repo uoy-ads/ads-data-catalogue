@@ -170,4 +170,5 @@ input::placeholder, textarea::placeholder {
   @apply underline;
 }
 
-@import "./footer.scss";
+@import "./header.css";
+@import "./footer.css";

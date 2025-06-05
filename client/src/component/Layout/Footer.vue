@@ -35,7 +35,7 @@
         <h3>Follow us</h3>
         <ul>
           <li><a href="https://www.facebook.com/archaeology.data.service/"><i class="fa-brands fa-facebook"></i></a></li>
-          <li><a href="https://twitter.com/ADS_Update"><i class="fa-brands fa-twitter"></i></a></li>
+          <li><a href="https://bsky.app/profile/ads-update.bsky.social"><i class="fa-brands fa-bluesky"></i></a></li>
           <li><a href="https://www.instagram.com/archaeologydataservice/?hl=en"><i class="fa-brands fa-instagram"></i></a>
           </li>
           <li><a href="https://www.linkedin.com/company/archaeology-data-service/"><i
@@ -51,18 +51,24 @@
         <nav aria-label="Footer navigation" >
           <div class="menu-footer-navigation-container">
             <ul id="menu-footer-navigation" class="menu">
-              <li id="menu-item-6820" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-6820"><a
-                  href="https://www.york.ac.uk/about/legal-statements/">University of York legal statements</a></li>
-              <li id="menu-item-3156" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3156"><a
-                  href="https://archaeologydataservice.ac.uk/terms-and-conditions/">Website terms and conditions</a></li>
-              <li id="menu-item-5469" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-5469"><a
-                  href="https://archaeologydataservice.ac.uk/cookie-policy/">Cookie policy</a></li>
-              <li id="menu-item-3157" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3157"><a
-                  href="https://archaeologydataservice.ac.uk/privacy/">Privacy policy</a></li>
-              <li id="menu-item-3373" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3373"><a
-                  href="https://archaeologydataservice.ac.uk/accessibility/">Accessibility</a></li>
-              <li id="menu-item-3951" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3951"><a
-                  href="https://archaeologydataservice.ac.uk/contact/">Contact</a></li>
+              <li>
+                <a href="https://www.york.ac.uk/about/legal-statements/">University of York legal statements</a>
+              </li>
+              <li>
+                <a href="https://archaeologydataservice.ac.uk/terms-and-conditions/">Terms and conditions</a>
+              </li>
+              <li>
+                <a href="https://archaeologydataservice.ac.uk/cookie-policy/">Cookie policy</a>
+              </li>
+              <li>
+                <a href="https://archaeologydataservice.ac.uk/privacy/">Privacy policy</a>
+              </li>
+              <li>
+                <a href="https://archaeologydataservice.ac.uk/accessibility/">Accessibility</a>
+              </li>
+              <li>
+                <a href="https://archaeologydataservice.ac.uk/contact/">Contact</a>
+              </li>
             </ul>
           </div>
         </nav>
@@ -76,11 +82,3 @@
     </div>
   </div>
 </template>
-
-<script setup lang="ts">
-import { $computed } from 'vue/macros';
-import { generalModule } from "@/store/modules";
-import BLink from '@/component/Base/Link.vue';
-
-const assets: string = $computed(() => generalModule.getAssetsDir);
-</script>
