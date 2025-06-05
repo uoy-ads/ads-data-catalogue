@@ -158,7 +158,7 @@ module.exports = env => {
     console.log('ARIADNE Portal - Building with public STAGING config...');
 
     process.env.NODE_ENV = 'staging';
-    ariadneApiPath = 'http://ads24staging0/archsearchv-api/api';
+    ariadneApiPath = 'http://ads24staging0/datacatalogue-api/api';
 
     // SND - DEMO environment only
     //config.output.publicPath = '/ariadneplus/html/';
@@ -166,8 +166,8 @@ module.exports = env => {
     //ariadneAssetPath = '/ariadneplus/html/static/assets';
 
     // ads24staging0
-    config.output.publicPath = '/archsearchv/';
-    ariadneAssetPath = '/archsearchv/static/assets';
+    config.output.publicPath = '/datacatalogue/';
+    ariadneAssetPath = '/datacatalogue/static/assets';
 
     config.mode = 'development';
     config.devtool = false;
