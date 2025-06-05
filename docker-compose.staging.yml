@@ -7,10 +7,10 @@ services:
       context: client
       dockerfile: docker/client-staging.dockerfile
     restart: always
-    container_name: datacatalogue
+    container_name: data-catalogue
     environment:
       VIRTUAL_HOST: ads24staging0
-      VIRTUAL_PATH: /datacatalogue/
+      VIRTUAL_PATH: /data-catalogue/
 
 
   ariadne-server:
@@ -21,10 +21,10 @@ services:
     volumes:
       - ./server/:/var/www/
     restart: always
-    container_name: datacatalogue-api
+    container_name: data-catalogue-api
     environment:
       VIRTUAL_HOST: ads24staging0
-      VIRTUAL_PATH: /datacatalogue-api/
+      VIRTUAL_PATH: /data-catalogue-api/
       VIRTUAL_DEST: /
 
 networks:
