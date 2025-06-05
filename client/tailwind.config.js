@@ -13,7 +13,7 @@ const palette = {
 
 // todo: import colors from theme file
 const colors = {
-  primary: palette.purple,
+  primary: palette.red,
   success: palette.midGreen,
   info: palette.purple,
   warning: palette.orange,
