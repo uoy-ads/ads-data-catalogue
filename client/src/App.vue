@@ -7,7 +7,7 @@
       <layout-mobile-header />
       <layout-desktop-header />
 
-      <div class="pt-4x pb-11x">
+      <div class="pb-11x" style="padding-top:81px;">
         <router-view />
       </div>
 
