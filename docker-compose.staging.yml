@@ -7,7 +7,7 @@ services:
       context: client
       dockerfile: docker/client-staging.dockerfile
     restart: always
-    container_name: archsearchv
+    container_name: datacatalogue
     environment:
       VIRTUAL_HOST: ads24staging0
       VIRTUAL_PATH: /datacatalogue/
@@ -21,7 +21,7 @@ services:
     volumes:
       - ./server/:/var/www/
     restart: always
-    container_name: archsearchv-api
+    container_name: datacatalogue-api
     environment:
       VIRTUAL_HOST: ads24staging0
       VIRTUAL_PATH: /datacatalogue-api/
