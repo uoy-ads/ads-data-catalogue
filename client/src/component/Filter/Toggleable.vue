@@ -21,7 +21,7 @@
       >
         <div class="relative">
           <ul
-            class="bg-yellow text-white inline-block shadow-full absolute top-0 left-full cursor-pointer hover:bg-green transition-color duration-300"
+            class="bg-primary text-white inline-block shadow-full absolute top-0 left-full cursor-pointer"
           >
             <li
               @click="toggleView('filters')"

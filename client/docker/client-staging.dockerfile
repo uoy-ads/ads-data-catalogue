@@ -29,8 +29,8 @@ RUN npm run build-staging
 FROM nginx:1.19.0-alpine AS ariadne-client
 
 # Copy app to server default web root
-RUN mkdir /usr/share/nginx/html/archsearchv
-COPY --from=ariadne-build /app/dist /usr/share/nginx/html/archsearchv
+RUN mkdir /usr/share/nginx/html/datacatalogue
+COPY --from=ariadne-build /app/dist /usr/share/nginx/html/datacatalogue
 
 # Copy nginx configuration
 COPY --from=ariadne-build /app/docker/nginx-staging.conf /etc/nginx/nginx.conf

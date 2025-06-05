@@ -1,7 +1,7 @@
 <template>
   <div class="pt-3x px-base max-w-screen-xl mx-auto">
     <h1 class="text-3x mb-md">Ariadne Theme</h1>
-    <div class="bg-blue-20 px-md py-lg mb-xl text-bold">
+    <div class="bg-primary-20 px-md py-lg mb-xl text-bold">
       <p class="mb-sm">Only classes used in the app are rendered in style, except widths/margins etc.</p>
       <p>The rest are purged by PurgeCSS</p>
     </div>

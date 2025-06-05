@@ -16,7 +16,7 @@
         >
           <!-- aat subjects -->
           <template v-if="autocompleteType === 'subjects'">
-            <i class="fas fa-info-circle text-blue pr-sm transition-color duration-300 hover:text-green"></i>
+            <i class="fas fa-info-circle text-primary pr-sm transition-color duration-300 hover:text-success"></i>
             <strong
               class="pt-xs pb-xs pr-xs inline-block"
               v-html="getAutoCompleteLabel(hit.label, newSearch)"
@@ -52,7 +52,7 @@
 
       <div
         v-if="autocomplete.hasMoreResults"
-        class="bg-red text-white p-sm text-md"
+        class="bg-danger text-white p-sm text-md"
       >
         Some options are currently not visible. Use the search field above to narrow down this list.
       </div>

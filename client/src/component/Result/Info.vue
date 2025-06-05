@@ -15,12 +15,12 @@
     </div>
     <div v-if="activeFilters.length && !hideFilters">
       <div v-for="(filter, key) in activeFilters" :key="key" @click="removeFilter(filter)"
-        class="inline-block bg-lightGray mr-md mt-md py-xs px-sm cursor-pointer hover:bg-red-80 group transition-bg duration-300">
+        class="inline-block bg-lightGray mr-md mt-md py-xs px-sm cursor-pointer hover:bg-danger-80 group transition-bg duration-300">
         <span class="group-hover:text-white transition-text duration-300 text-mmd align-middle">
           {{ getFilterTitle(filter) }}:
           {{ getFilterValue(filter) }}
         </span>
-        <i class="fas fa-times text-md text-red group-hover:text-white align-middle ml-sm transition-text duration-300"></i>
+        <i class="fas fa-times text-md text-danger group-hover:text-white align-middle ml-sm transition-text duration-300"></i>
       </div>
     </div>
   </div>

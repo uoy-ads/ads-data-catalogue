@@ -2,7 +2,7 @@
 <template>
   <div>
     <div class="text-center pt-3x px-base max-w-screen-xl mx-auto">
-      <h1 class="text-xl text-red mb-md">
+      <h1 class="text-xl text-danger mb-md">
         The portal is temporarily unavailable
       </h1>
       <p class="mb-md">

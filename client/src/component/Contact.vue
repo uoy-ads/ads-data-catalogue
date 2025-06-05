@@ -6,7 +6,7 @@
     <form v-show="!successMsg" v-on:submit.prevent="sendMail">
       <p :class="headerClasses">
         Name
-        <span class="text-red text-lg">*</span>
+        <span class="text-danger text-lg">*</span>
       </p>
       <p class="mb-md">
         <input type="text"
@@ -18,7 +18,7 @@
 
       <p :class="headerClasses">
         Email
-        <span class="text-red text-lg">*</span>
+        <span class="text-danger text-lg">*</span>
       </p>
       <p class="mb-md">
         <input type="email"
@@ -40,7 +40,7 @@
 
       <p :class="headerClasses">
         Message
-        <span class="text-red text-lg">*</span>
+        <span class="text-danger text-lg">*</span>
       </p>
       <p class="mb-md">
         <textarea placeholder="Message.."
@@ -55,7 +55,7 @@
         <div class="g-recaptcha" :data-sitekey="captchaPublicKey"></div>
       </div>
 
-      <p v-if="errorMsg" class="p-sm mb-lg bg-red-80 text-white">
+      <p v-if="errorMsg" class="p-sm mb-lg bg-danger-80 text-white">
         {{ errorMsg }}
       </p>
 
@@ -66,7 +66,7 @@
         </button>
       </p>
     </form>
-    <p v-if="successMsg" class="p-sm mb-lg bg-blue-80 text-white">
+    <p v-if="successMsg" class="p-sm mb-lg bg-primary-80 text-white">
       {{ successMsg }}
     </p>
   </div>

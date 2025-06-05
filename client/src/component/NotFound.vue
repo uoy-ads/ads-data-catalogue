@@ -3,14 +3,14 @@
   <div>
     <b-link
       to="/"
-      class="p-md bg-red text-white hover:bg-red-90 transition-bg duration-300 w-full block text-center"
+      class="p-md bg-danger text-white hover:bg-danger-90 transition-bg duration-300 w-full block text-center"
     >
       <i class="fas fa-long-arrow-alt-left mr-sm"></i>
       Go back to Front page
     </b-link>
 
     <div class="text-center pt-3x px-base max-w-screen-xl mx-auto">
-      <h1 class="text-xl text-red mb-md">
+      <h1 class="text-xl text-danger mb-md">
         Sorry, we can't find that page (404).
       </h1>
       <p class="mb-md">
@@ -24,9 +24,9 @@
       <div class="mb-2x">
         <filter-search
           class="max-w-2xl m-auto"
-          color="yellow"
-          hoverStyle="hover:bg-yellow-80"
-          focusStyle="focus:border-yellow"
+          color="primary"
+          hoverStyle="hover:bg-primary-80"
+          focusStyle="focus:border-primary"
           :big="true"
           :hasAutocomplete="true"
           showFields="select"

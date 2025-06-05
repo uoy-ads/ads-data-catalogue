@@ -61,7 +61,7 @@
     </div>
 
     <ul
-      class="flex bg-yellow-50 py-base px-2x justify-end text-black-50 text-mmd relative z-20"
+      class="flex bg-primary-50 py-base px-2x justify-end text-black-50 text-mmd relative z-20"
       style="box-shadow: 0px -4px 3px rgba(0, 0, 0, 0.15);"
     >
       <li class="">

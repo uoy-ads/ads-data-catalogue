@@ -9,9 +9,9 @@
         :title="nativeInfoIconHelpText"
         top="-.6rem"
         left="1.25rem"
-        messageClasses="bg-blue text-white"
+        messageClasses="bg-primary text-white"
       >
-        <i class="fa fa-globe mr-sm text-blue" />
+        <i class="fa fa-globe mr-sm text-primary" />
       </help-tooltip>
 
       {{ nativeInfoText }}

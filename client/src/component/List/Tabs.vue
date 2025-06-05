@@ -6,8 +6,8 @@
         :key="tab.props.title"
         class="text-white -mb-1 text-md p-md transition-all duration-300 focus:outline-none cursor-pointer flex-1"
         :class="{
-          'bg-blue': tab.props.title === selectedTabTitle,
-          'bg-blue-50 hover:bg-blue': tab.props.title !== selectedTabTitle,
+          'bg-primary': tab.props.title === selectedTabTitle,
+          'bg-primary-50 hover:bg-primary': tab.props.title !== selectedTabTitle,
           'ml-sm': index,
         }"
         @click="selectTab(tab.props.title)"

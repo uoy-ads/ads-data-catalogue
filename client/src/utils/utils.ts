@@ -258,7 +258,7 @@ export default {
 
   // simple auto link text
   autolinkText (text: string) {
-    return text.replace(/(?:https?):\/\/[a-z0-9_\.\:\-\+\/]*[a-z0-9\/]/gi, url => '<a class="text-blue hover:underline word-break" target="_blank" href="' + this.escHtml(url) + '">' + this.escHtml(url) + '</a>');
+    return text.replace(/(?:https?):\/\/[a-z0-9_\.\:\-\+\/]*[a-z0-9\/]/gi, url => '<a class="text-primary hover:underline word-break" target="_blank" href="' + this.escHtml(url) + '">' + this.escHtml(url) + '</a>');
   },
 
   // Returns common used marker types

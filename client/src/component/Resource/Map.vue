@@ -9,7 +9,7 @@
           <div class="py-md px-base flex items-center w-full">
 
             <i v-if="isPolygonSpatial"
-              class="fa fa-draw-polygon text-red text-2xl mr-sm"
+              class="fa fa-draw-polygon text-danger text-2xl mr-sm"
             />
             <img v-else
               :src="markerTypes.point.current"
@@ -37,7 +37,7 @@
             </template>
 
             <div class="ml-auto relative">
-              <i class="fas fa-expand text-lg transition-color duration-300 hover:text-green px-sm"
+              <i class="fas fa-expand text-lg transition-color duration-300 hover:text-success px-sm"
                 @mouseover="activeMapSizePopup = true"
                 @mouseleave="activeMapSizePopup = false"
               />

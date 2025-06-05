@@ -32,16 +32,16 @@
 
             <div
               v-if="resultAggIsActive(id, bucket.key)"
-              class="flex justify-between items-center px-md py-sm text-md text-white bg-blue hover:bg-blue-90 group transition-all duration-300 cursor-pointer border-t-base"
+              class="flex justify-between items-center px-md py-sm text-md text-white bg-primary hover:bg-primary-90 group transition-all duration-300 cursor-pointer border-t-base"
               @click="setActive(id, bucket.key, false)"
             >
               <span class="flex-grow break-word pr-lg items-center" style="display:flex">
                 <i v-if="id === 'publisher' && findPublisher(bucket.key)"
-                  class="fas fa-info-circle text-white pr-sm py-sm transition-color duration-300 hover:text-green"
+                  class="fas fa-info-circle text-white pr-sm py-sm transition-color duration-300 hover:text-success"
                   @click.prevent.stop="() => router.push(utils.paramsToString('/publisher/', { publisher: bucket.key }))">
                 </i>
                 <i v-else-if="id === 'derivedSubject'"
-                  class="fas fa-info-circle text-white pr-sm py-sm transition-color duration-300 hover:text-green"
+                  class="fas fa-info-circle text-white pr-sm py-sm transition-color duration-300 hover:text-success"
                   @click.prevent.stop="() => router.push(utils.paramsToString('/subject/' + bucket.key, { derivedSubject: bucket.key }))">
                 </i>
 
@@ -61,11 +61,11 @@
                 </span>
               </span>
 
-              <span class="bg-white rounded-lg py-xs px-sm text-blue text-sm font-bold group-hover:text-red">
+              <span class="bg-white rounded-lg py-xs px-sm text-primary text-sm font-bold group-hover:text-danger">
                 <i class="fa-times fas align-middle transition-color duration-300 text-sm" />
               </span>
 
-              <span v-if="bucket.doc_count" class="rounded-lg bg-lightGray py-xs px-sm text-blue text-sm font-bold ml-sm">
+              <span v-if="bucket.doc_count" class="rounded-lg bg-lightGray py-xs px-sm text-primary text-sm font-bold ml-sm">
                 {{ bucket.doc_count }}
               </span>
             </div>
@@ -76,12 +76,12 @@
               @click="setActive(id, bucket.key, true)"
             >
               <span v-if="id === 'publisher' && findPublisher(bucket.key)">
-                <i class="fas fa-info-circle text-blue pr-sm py-sm transition-color duration-300 hover:text-green"
+                <i class="fas fa-info-circle text-primary pr-sm py-sm transition-color duration-300 hover:text-success"
                   @click.prevent.stop="() => router.push(utils.paramsToString('/publisher/', { publisher: bucket.key }))">
                 </i>
               </span>
               <span v-else-if="id === 'derivedSubject'">
-                <i class="fas fa-info-circle text-blue pr-sm py-sm transition-color duration-300 hover:text-green"
+                <i class="fas fa-info-circle text-primary pr-sm py-sm transition-color duration-300 hover:text-success"
                   @click.prevent.stop="() => router.push(utils.paramsToString('/subject/' + bucket.key, { derivedSubject: bucket.key }))">
                 </i>
               </span>
@@ -114,7 +114,7 @@
                   @mouseleave="toggleTooltip($event, false)"
                 />
 
-                <div class="fixed z-20 hidden bg-blue text-white p-sm">
+                <div class="fixed z-20 hidden bg-primary text-white p-sm">
                   <span v-for="(label, key) in bucket.extraLabels" v-bind:key="key">
                     <span v-if="label">
                       <strong>{{ utils.sentenceCase(utils.splitCase(key)) }}:</strong> {{ label }}<br/>
@@ -129,14 +129,14 @@
 
         <div
           v-if="noBucketMatch(id)"
-          class="bg-red text-white p-sm text-md"
+          class="bg-danger text-white p-sm text-md"
         >
           No results found.
         </div>
 
         <div
           v-else-if="hasMoreDocs"
-          class="bg-yellow text-white p-sm text-md cursor-pointer hover:bg-green transition-background duration-300"
+          class="bg-primary text-white p-sm text-md cursor-pointer"
           @click="getMore++"
         >
           Get 20 more results..

@@ -2,7 +2,7 @@
   <help-tooltip
     top="-2.5rem"
     left="0"
-    messageClasses="bg-yellow text-white cursor-pointer"
+    messageClasses="bg-primary text-white cursor-pointer"
     @click.prevent="showPopup = true">
     <div class="text-white cursor-pointer">
       <i class="fas fa-question-circle text-lg" />
@@ -19,12 +19,12 @@
     @click.self="showPopup = false"
   >
     <div class="bg-white text-hg max-w-screen-lg max-h-full overflow-y-auto">
-      <h2 class="text-xl mb-md bg-yellow text-white px-xl py-md flex items-center justify-between">
+      <h2 class="text-xl mb-md bg-primary text-white px-xl py-md flex items-center justify-between">
         <div>
           Search help
           <i class="fas fa-question-circle text-lg ml-sm" />
         </div>
-        <i class="fas fa-times text-xl cursor-pointer pl-sm py-sm hover:text-red transition-color duration-300" @click="showPopup = false"></i>
+        <i class="fas fa-times text-xl cursor-pointer pl-sm py-sm hover:text-danger transition-color duration-300" @click="showPopup = false"></i>
       </h2>
       <div class="px-xl py-md">
         <p class="mb-md">Welcome to the ARIADNE Portal where you can search over 2 million records relating to archaeological fieldwork reports, research papers, scientific datasets, sites and monuments through to individual artefacts from across the world.</p>

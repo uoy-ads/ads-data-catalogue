@@ -6,7 +6,7 @@
         :value="perPage"
         :options="options"
         :maxWidth="45"
-        color="blue"
+        color="primary"
         @input="setPerPage"
       />
     </div>

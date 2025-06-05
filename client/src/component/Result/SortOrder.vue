@@ -2,7 +2,7 @@
 <template>
   <div class="flex items-center">
     <div class="p-sm pr-sm">
-      <help-tooltip top="-.25rem" left="1rem" messageClasses="bg-blue text-white group-hover:z-25" customStyle="white-space:normal;width:300px">
+      <help-tooltip top="-.25rem" left="1rem" messageClasses="bg-primary text-white group-hover:z-25" customStyle="white-space:normal;width:300px">
         <i class="fas fa-question-circle" style="transform:translateY(-1px)" />
         <template v-slot:content>
           <ul class="p-sm -mb-md">
@@ -21,7 +21,7 @@
       :value="order"
       :options="options"
       :minWidth="185"
-      color="blue"
+      color="primary"
       @input="setOrder"
     />
   </div>

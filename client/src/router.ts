@@ -8,7 +8,6 @@ import Browse from './component/Browse.vue';
 import BrowseWhat from './component/BrowseWhat.vue';
 import BrowseWhen from './component/BrowseWhen.vue';
 import BrowseWhere from './component/BrowseWhere.vue';
-import FrontPage from './component/FrontPage.vue';
 import NotFound from './component/NotFound.vue';
 import Resource from './component/Resource.vue';
 import Subject from './component/Subject.vue';
