@@ -10,7 +10,7 @@ services:
     container_name: archsearchv
     environment:
       VIRTUAL_HOST: ads24staging0
-      VIRTUAL_PATH: /archsearchv/
+      VIRTUAL_PATH: /datacatalogue/
 
 
   ariadne-server:
@@ -24,7 +24,7 @@ services:
     container_name: archsearchv-api
     environment:
       VIRTUAL_HOST: ads24staging0
-      VIRTUAL_PATH: /archsearchv-api/
+      VIRTUAL_PATH: /datacatalogue-api/
       VIRTUAL_DEST: /
 
 networks:
