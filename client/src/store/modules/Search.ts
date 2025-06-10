@@ -246,7 +246,7 @@ export class SearchModule {
                 }
               });
             }
-            if (currentPath === '/search') {
+            if (currentPath === '/search' || currentPath === '/') {
               if (this.timelineLoading) {
                 data.aggregations.range_buckets = {};
               } else {
@@ -277,7 +277,7 @@ export class SearchModule {
       }
     }
 
-    if (currentPath === '/search') {
+    if (currentPath === '/search' || currentPath === '/') {
       this.setTimelineSearch({ sendParams, reqId });
     }
   }

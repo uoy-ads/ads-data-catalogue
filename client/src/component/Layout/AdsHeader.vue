@@ -20,7 +20,7 @@
                 <div class="menu-main-navigation-container">
                     <ul id="menu-main-navigation" class="site-navigation">
                         <li class="current-menu-item">
-                            <a href="https://archaeologydataservice.ac.uk/search-data/">Search data</a>
+                            <router-link to="/">Search data</router-link>
                         </li>
                         <li>
                             <a href="https://archaeologydataservice.ac.uk/deposit-data/">Deposit data <em>ADS-easy</em></a>
