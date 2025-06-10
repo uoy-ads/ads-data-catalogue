@@ -19,7 +19,7 @@
             <nav class="m-navigation" aria-label="Main navigation">
                 <div class="menu-main-navigation-container">
                     <ul id="menu-main-navigation" class="site-navigation">
-                        <li>
+                        <li class="current-menu-item">
                             <a href="https://archaeologydataservice.ac.uk/search-data/">Search data</a>
                         </li>
                         <li>

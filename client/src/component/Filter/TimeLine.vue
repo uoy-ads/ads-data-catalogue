@@ -308,9 +308,11 @@ const getData = (buckets: any): any => {
 
   let width = (document.getElementById(timelineId) as any).parentElement.parentElement.parentElement.getBoundingClientRect().width;
   let gradient = ctx.createLinearGradient(0, 0, 0, Math.round(width / 2));
-  gradient.addColorStop(0, '#BB3921');
-  gradient.addColorStop(0.5, '#D5A03A');
-  gradient.addColorStop(1, '#75A99D');
+
+  // tood: get from theme colours
+  gradient.addColorStop(0, '#cc0000');
+  gradient.addColorStop(0.5, '#e4a024');
+  gradient.addColorStop(1, '#41b26e');
 
   return {
     labels: labels,
