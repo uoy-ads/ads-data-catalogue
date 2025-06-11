@@ -4,15 +4,15 @@
 <template>
   <div>
     <div>
-      <!--<layout-mobile-header />
-      <layout-desktop-header />-->
-      <layout-ads-header />
+
+      <Header />
 
       <div class="pb-11x" style="padding-top:81px;">
         <router-view />
       </div>
 
-      <layout-footer />
+      <Footer />
+
     </div>
 
     <help-loader />
@@ -22,10 +22,8 @@
 <script setup lang="ts">
 import { onMounted } from 'vue';
 import { generalModule } from "@/store/modules";
-import LayoutMobileHeader from './component/Layout/MobileHeader.vue';
-import LayoutDesktopHeader from './component/Layout/DesktopHeader.vue';
-import LayoutAdsHeader from './component/Layout/AdsHeader.vue';
-import LayoutFooter from './component/Layout/Footer.vue';
+import Header from './theme/Header.vue';
+import Footer from './theme/Footer.vue';
 import HelpLoader from './component/Help/Loader.vue';
 import '../static/fa/css/all.min.css';
 import 'leaflet/dist/leaflet.css';

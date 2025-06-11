@@ -1,24 +1,4 @@
-const palette = {
-  red: '#cc0000',
-  orange: '#e4a024',
-  darkGreen: '#326537',
-  purple: '#6956a4',
-  brown: '#744927',
-  yellow: '#fae100',
-  midGrey: '#6a6968',
-  lightGrey: '#b9b7b6',
-  black: '#000000',
-  midGreen: '#41b26e'
-}
-
-// todo: import colors from theme file
-const colors = {
-  primary: palette.red,
-  success: palette.midGreen,
-  info: palette.purple,
-  warning: palette.orange,
-  danger: palette.red,
-}
+const colors = require('./src/theme/colors');
 
 /**
  * instead of tailwinds bg-opacity, border etc (which doesn't work in internet explorer)
