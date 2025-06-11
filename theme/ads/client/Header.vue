@@ -1,3 +1,155 @@
+<template>
+    <div class="m-site-wrapper">
+        <div class="m-site-header">
+            <div class="m-logo">
+                <a href="https://archaeologydataservice.ac.uk/">
+                    <img src="https://archaeologydataservice.ac.uk/app/themes/ads_theme/public/images/logo.svg" alt="Archaeology Data Service" />
+                    <span>Archaeology Data Service</span>
+                </a>
+            </div>
+
+            <div class="m-hamburger">
+                <button class="hamburger" type="button">
+                    <span class="hamburger-box">
+                        <span class="hamburger-inner"></span>
+                    </span>
+                </button>
+            </div>
+
+            <nav class="m-navigation" aria-label="Main navigation">
+                <div class="menu-main-navigation-container">
+                    <ul id="menu-main-navigation" class="site-navigation">
+                        <li class="current-menu-item">
+                            <router-link to="/">Search data</router-link>
+                        </li>
+                        <li>
+                            <a href="https://archaeologydataservice.ac.uk/deposit-data/">Deposit data <em>ADS-easy</em></a>
+                        </li>
+                        <li>
+                            <a href="https://archaeologydataservice.ac.uk/help-guidance/">Help &amp; guidance</a>
+                        </li>
+                        <li>
+                            <a href="https://archaeologydataservice.ac.uk/news-events/">News &amp; events</a>
+                        </li>
+                        <li>
+                            <a href="https://archaeologydataservice.ac.uk/blog/">Blog</a>
+                        </li>
+                        <li>
+                            <a href="https://archaeologydataservice.ac.uk/about/">About</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+            <div class="m-navigation-mobile">
+                <ul id="menu-main-navigation" class="site-navigation">
+                    <li>
+                        <a href="https://archaeologydataservice.ac.uk/search-data/">Search data</a>
+                    </li>
+                    <li>
+                        <a href="https://archaeologydataservice.ac.uk/deposit-data/">Deposit data <em>ADS-easy</em></a>
+                    </li>
+                    <li>
+                        <a href="https://archaeologydataservice.ac.uk/help-guidance/">Help &amp; guidance</a>
+                    </li>
+                    <li>
+                        <a href="https://archaeologydataservice.ac.uk/news-events/">News &amp; events</a>
+                    </li>
+                    <li>
+                        <a href="https://archaeologydataservice.ac.uk/blog/">Blog</a>
+                    </li>
+                    <li>
+                        <a href="https://archaeologydataservice.ac.uk/about/">About</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</template>
+
+<script setup lang="ts">
+import { onMounted } from 'vue';
+
+const main = async (err) => {
+  if (err) {
+    // handle hmr errors
+    console.error(err);
+  }
+
+  // application code
+  mobileNavigation();
+  mobileSubnavigation();
+};
+
+const mobileNavigation = function () {
+
+  /* Mobile menu */
+
+  const newNavWrap = document.createElement('div')
+  newNavWrap.classList.add('m-navigation-mobile')
+  insertAfter(newNavWrap, document.querySelector('.m-navigation'))
+
+  const newNav = document.querySelector('.m-navigation .site-navigation').cloneNode(true)
+  newNav.classList.add('site-navigation')
+  document.querySelector('.m-navigation-mobile').prepend(newNav)
+
+  let menuOpen = false
+
+  document.querySelector('.hamburger').addEventListener('click', function () {
+
+    if (menuOpen) { // Hide
+      this.classList.remove('is-active')
+      menuOpen = false
+      document.querySelector('.m-navigation-mobile').classList.remove("is-visible")
+      document.querySelector('.m-navigation-mobile').classList.add("is-hidden")
+      document.querySelector('body').classList.remove("has-mobile-menu-open")
+    } else { // Show
+      this.classList.add('is-active')
+      menuOpen = true
+      document.querySelector('.m-navigation-mobile').style.visibility = 'visible'
+      document.querySelector('.m-navigation-mobile').style.zIndex = 300
+      document.querySelector(".m-navigation-mobile").classList.remove("is-hidden")
+      document.querySelector(".m-navigation-mobile").classList.add("is-visible")
+      document.querySelector('.m-navigation-mobile').style.opacity = 1
+      document.querySelector('body').classList.add("has-mobile-menu-open")
+    }
+
+  }, false)
+
+  // fix for mobile overlay not hiding on screen size increase beyond mobile
+  const query = matchMedia('(min-width: 767.5px)');
+
+  query.addEventListener('change', function () {
+    if (menuOpen) {
+      document.querySelector('.hamburger').classList.remove('is-active')
+      menuOpen = false
+      document.querySelector('.m-navigation-mobile').classList.remove("is-visible")
+      document.querySelector('.m-navigation-mobile').classList.add("is-hidden")
+      document.querySelector('body').classList.remove("has-mobile-menu-open")
+    }
+  })
+
+}
+
+const insertAfter = function (newNode, existingNode) {
+  existingNode.parentNode.insertBefore(newNode, existingNode.nextSibling)
+}
+
+const mobileSubnavigation = function () {
+  let toggles = document.querySelectorAll('.m-subnavigation .toggle, .m-index-subnavigation .toggle')
+  toggles.forEach(function (toggle) {
+    toggle.addEventListener('click', function (event) {
+      const div = event.target.closest('.m-subnavigation, .m-index-subnavigation')
+      div.classList.toggle('is-open')
+    })
+  })
+}
+
+onMounted(() => {
+    main()
+})
+</script>
+
+<style>
 .m-site-header {
     background: #fff;
     box-shadow: 0 0 6px rgba(0,0,0,.15);
@@ -252,7 +404,9 @@
 
 .m-navigation a {
     display: block;
-    font-weight: 600
+    color: #c00;
+    font-weight: 900;
+    position: relative
 }
 
 .m-navigation li.current-menu-item a,.m-navigation li.current-page-ancestor a,.m-navigation li.is-current a {
@@ -262,12 +416,6 @@
 
 .m-navigation li.current-menu-item a:hover,.m-navigation li.current-page-ancestor a:hover,.m-navigation li.is-current a:hover {
     color: #333
-}
-
-.m-navigation a {
-    color: #c00;
-    font-weight: 900;
-    position: relative
 }
 
 .m-navigation a:hover,.m-navigation a:hover em {
@@ -432,4 +580,4 @@
         max-width:90vw
     }
 }
-
+</style>

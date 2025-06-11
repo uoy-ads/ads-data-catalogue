@@ -169,6 +169,3 @@ input::placeholder, textarea::placeholder {
 .services-a-style a:hover {
   @apply underline;
 }
-
-@import "./header.css";
-@import "./footer.css";
