@@ -69,6 +69,12 @@
               <li>
                 <a href="https://archaeologydataservice.ac.uk/contact/">Contact</a>
               </li>
+              <li>
+                <a href="https://ariadne-infrastructure.github.io/docs/Portal_User_Guide/Section-1_What" target="_blank">ADS Catalogue user guide</a>
+              </li>
+              <li>
+                <router-link to="/about">Disclaimer</router-link>
+              </li>
             </ul>
           </div>
         </nav>
