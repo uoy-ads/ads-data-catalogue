@@ -18,4 +18,3 @@ createApp(App)
   .mount('#app')
 
 main();
-document.querySelector("#footer-year").innerText = new Date().getFullYear();
