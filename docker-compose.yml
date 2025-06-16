@@ -1,7 +1,5 @@
 # Settings for Ariadne Server Module
 
-version: '3'
-
 services:
   ariadne-server:
     build:
@@ -13,6 +11,8 @@ services:
     volumes:
       - ./server/:/var/www/
       - ./theme/${APP_THEME}/server/:/var/www/html/theme/
+    ports:
+      - 8080:80
 
   # elasticsearch:
   #   image: docker.elastic.co/elasticsearch/elasticsearch:7.4.2
