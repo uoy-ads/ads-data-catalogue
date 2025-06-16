@@ -7,11 +7,12 @@ services:
     build:
       context: .
       dockerfile: server/docker/server.dockerfile
+      args:
+        APP_THEME: ${APP_THEME}
     working_dir: /var/www/html
     volumes:
       - ./server/:/var/www/
-    ports:
-      - 8080:80
+      - ./theme/${APP_THEME}/server/:/var/www/html/theme/
 
   # elasticsearch:
   #   image: docker.elastic.co/elasticsearch/elasticsearch:7.4.2

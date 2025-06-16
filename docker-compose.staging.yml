@@ -4,8 +4,10 @@ services:
 
   ariadne-client:
     build:
-      context: client
-      dockerfile: docker/client-staging.dockerfile
+      context: .
+      dockerfile: client/docker/client-staging.dockerfile
+      args:
+        APP_THEME: ${APP_THEME}
     restart: always
     container_name: data-catalogue
     environment:
@@ -17,9 +19,9 @@ services:
     build:
       context: .
       dockerfile: server/docker/server.dockerfile
+      args:
+        APP_THEME: ${APP_THEME}
     working_dir: /var/www/html
-    volumes:
-      - ./server/:/var/www/
     restart: always
     container_name: data-catalogue-api
     environment:
@@ -29,5 +31,5 @@ services:
 
 networks:
   default:
-    external:
-      name: nginx-proxy
+    name: nginx-proxy
+    external: true

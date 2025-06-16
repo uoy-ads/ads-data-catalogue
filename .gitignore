@@ -11,3 +11,4 @@ server/classes/AAT/data/*
 server/classes/settings.json
 client/src/theme/*
 server/theme/*
+.env

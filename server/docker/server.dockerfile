@@ -37,7 +37,12 @@ RUN chown -R www-data:www-data /var/www/html
 WORKDIR /var/www/html
 
 # Copy web content to container webroot
-COPY  ./server/html/ /var/www/html
+COPY ./server/html/ /var/www/html
+
+# Copy selected theme's server files directly into /var/www/html/theme
+ARG APP_THEME
+RUN if [ -z "$APP_THEME" ]; then echo "ERROR: APP_THEME environment variable not set."; exit 1; fi
+COPY theme/${APP_THEME}/server/ /var/www/html/theme/
 
 # Copy PHP backend
 COPY  ./server/classes/ /var/www/classes

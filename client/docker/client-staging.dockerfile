@@ -16,11 +16,17 @@
 FROM node:22.3-alpine AS ariadne-build
 LABEL maintainer="SND <team-it@snd.gu.se>"
 WORKDIR /app
-COPY package*.json ./
+COPY client/package*.json ./
 #RUN npm install
 # install from package-lock.json
 RUN npm ci
-COPY . .
+# Copy all client files from project root context
+COPY client/. .
+
+# Copy selected theme's client files directly into src/theme
+ARG APP_THEME
+RUN if [ -z "$APP_THEME" ]; then echo "ERROR: APP_THEME environment variable not set."; exit 1; fi
+COPY theme/${APP_THEME}/client/ src/theme/
 RUN npm run build-staging
 
 #
