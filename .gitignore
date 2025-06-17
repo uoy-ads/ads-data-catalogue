@@ -12,3 +12,5 @@ server/classes/settings.json
 client/src/theme/*
 server/theme/*
 .env
+.env.staging
+.env.production
