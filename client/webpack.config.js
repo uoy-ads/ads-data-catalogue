@@ -158,7 +158,8 @@ module.exports = env => {
     console.log('ARIADNE Portal - Building with public STAGING config...');
 
     process.env.NODE_ENV = 'staging';
-    ariadneApiPath = 'http://ads24staging0/data-catalogue-api/api';
+    // Use HOSTNAME environment variable for staging host, fallback to 'localhost' if not set
+    ariadneApiPath = `http://${process.env.HOSTNAME || 'localhost'}/data-catalogue-api/api`;
 
     // SND - DEMO environment only
     //config.output.publicPath = '/ariadneplus/html/';

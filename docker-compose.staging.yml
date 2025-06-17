@@ -9,7 +9,7 @@ services:
     restart: always
     container_name: data-catalogue
     environment:
-      VIRTUAL_HOST: ads24staging0
+      VIRTUAL_HOST: ${HOSTNAME}
       VIRTUAL_PATH: /data-catalogue/
 
 
@@ -23,7 +23,7 @@ services:
     restart: always
     container_name: data-catalogue-api
     environment:
-      VIRTUAL_HOST: ads24staging0
+      VIRTUAL_HOST: ${HOSTNAME}
       VIRTUAL_PATH: /data-catalogue-api/
       VIRTUAL_DEST: /
 
