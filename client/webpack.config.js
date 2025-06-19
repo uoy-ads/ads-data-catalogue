@@ -8,7 +8,6 @@ const CssMinimizerPlugin = require('css-minimizer-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
-const InjectPlugin = require('webpack-inject-plugin').default;
 
 /**
  * Settings
@@ -81,6 +80,10 @@ module.exports = env => {
     plugins: [
       new webpack.DefinePlugin({
         __VUE_PROD_DEVTOOLS__: false,
+        'process.env.ARGV': JSON.stringify(argvStr),
+        'process.env.apiUrl': JSON.stringify(ariadneApiPath),
+        'process.env.ARIADNE_PUBLIC_PATH': JSON.stringify(ariadnePublicPath),
+        'process.env.ARIADNE_ASSET_PATH': JSON.stringify(ariadneAssetPath),
       }),
 
       new CleanWebpackPlugin(),
@@ -251,16 +254,8 @@ module.exports = env => {
 
   const argvStr = process.argv.includes('--no-purge') ? '--no-purge' : '';
 
-  config.plugins.push(new InjectPlugin(() => `
-    window.process = {
-      argv: "${ argvStr }",
-      env: {
-        apiUrl: "${ariadneApiPath}",
-        ARIADNE_PUBLIC_PATH: "${ariadnePublicPath}",
-        ARIADNE_ASSET_PATH: "${ariadneAssetPath}"
-      }
-    };`
-  ));
+  // InjectPlugin block removed in favor of DefinePlugin for modern, maintainable config injection.
+  // All variables are now available as process.env.* in client code via DefinePlugin.
 
   return config;
 }

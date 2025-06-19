@@ -43,7 +43,7 @@ module.exports = {
    * Use "npm run dev -- --no-purge" when developing for easier access to all classes
    */
   content: {
-    enabled: isDevelopment && process.argv.includes('--no-purge') ? false : true,
+    enabled: isDevelopment && process.env.ARGV.includes('--no-purge') ? false : true,
     content: [
       './dist/index.html',
       './src/**/*.{html,ts,vue}',
